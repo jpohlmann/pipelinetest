@@ -1,7 +1,7 @@
 node {
     stage 'build'
         echo 'Building....'
-        sh 'cd ../workplace@script'
+        sh 'cd ../workspace@script'
     stage 'test'
         echo 'Testing....'
     stage 'deploy'
