@@ -1,7 +1,7 @@
 node {
     stage 'build'
         echo 'Building....'
-        sh 'cd ../workspace@script'
+        sh 'git checkout http://github.com/jpohlmann/pipelinetest ./'
     stage 'test'
         echo 'Testing....'
     stage 'deploy'
