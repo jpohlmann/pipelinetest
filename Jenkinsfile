@@ -1,8 +1,7 @@
 node {
     stage 'build'
         echo 'Building....'
-        sh 'rm -rf ./*'
-        sh 'git clone http://github.com/jpohlmann/pipelinetest ./'
+        sh 'git pull'
     stage 'test'
         echo 'Testing....'
     stage 'deploy'
