@@ -1,6 +1,6 @@
 node {
     stage 'build'
-        pwd
+        sh 'pwd'
         echo 'Building....'
     stage 'test'
         echo 'Testing....'
