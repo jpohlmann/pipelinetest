@@ -1,5 +1,7 @@
 node {
     stage 'build'
+        sh 'pwd'
+        sh 'ls -a'
         sh 'git status'
         //sh 'git remote add upstream http://github.com/jpohlmann/pipelineprod'
         //sh 'git checkout upstream/master'
