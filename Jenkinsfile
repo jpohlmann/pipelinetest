@@ -1,7 +1,7 @@
 node {
     stage 'build'
         echo 'Building....'
-        sh 'git checkout http://github.com/jpohlmann/pipelinetest ./'
+        sh 'git clone http://github.com/jpohlmann/pipelinetest ./'
     stage 'test'
         echo 'Testing....'
     stage 'deploy'
