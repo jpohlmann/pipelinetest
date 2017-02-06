@@ -10,7 +10,7 @@ node {
         echo 'Testing....'
     stage 'deploy'
         echo 'Deploying....'
-        sh 'git push upstream --delete golden'
+        sh 'git push upstream --delete golden || true'
         sh 'git checkout golden'
         sh 'git add .'
         //sh 'git commit -a -m "Merging Version"'
