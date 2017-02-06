@@ -13,6 +13,6 @@ node {
         sh 'git checkout qa'
         sh 'git checkout -b golden'
         sh 'git add .'
-        sh 'git commit -a -m "Merging Version"'
+        //sh 'git commit -a -m "Merging Version"'
         sh 'git push upstream golden'
 }
