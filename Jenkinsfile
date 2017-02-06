@@ -11,8 +11,8 @@ node {
         echo 'Deploying....'
         sh 'git push upstream --delete golden'
         sh 'git checkout qa'
-        sh 'git branch -d golden'
         sh 'git checkout -b golden'
         sh 'git add .'
         sh 'git commit -a -m "Merging Version"'
+        sh 'git push upstream golden'
 }
