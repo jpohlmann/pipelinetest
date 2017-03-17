@@ -10,9 +10,14 @@ node {
         echo 'Testing....'
     stage 'deploy'
         echo 'Deploying....'
-        sh 'git push upstream --delete golden || true'
-        sh 'git checkout golden'
+        sh 'git checkout upstream/golden'
+        sh 'git branch ugolden'
+        sh 'git checkout ugolden'
+        sh 'git merge qa -Xours'
         sh 'git add .'
-        //sh 'git commit -a -m "Merging Version"'
-        sh 'git push upstream golden'
+        //Deploy scripts here
+        sh 'git commit -m "Merging for deployment"'
+        sh 'git push upstream ugolden:golden'
+        sh 'git checkout qa'
+        sh 'git branch ugolden -D'
 }
