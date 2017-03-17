@@ -2,7 +2,7 @@ node {
     stage 'build'
         echo 'Building....'
         sh 'rm -rf ./*'
-        sh 'rm -rf ./.*'
+        sh 'rm -rf ./.* || true'
         sh 'git clone https://github.com/jpohlmann/pipelinetest/ ./'
         sh 'git remote add upstream https://github.com/jpohlmann/pipelineprod/'
         sh 'git add .'
