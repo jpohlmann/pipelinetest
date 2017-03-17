@@ -18,7 +18,7 @@ node {
         sh 'git merge qa -Xours'
         sh 'git add .'
         //Deploy scripts here
-        sh 'git commit -m "Merging for deployment"'
+        sh 'git commit -m "Merging for deployment" || true'
         sh 'git push upstream ugolden:golden'
         sh 'git checkout qa'
         sh 'git branch ugolden -D'
