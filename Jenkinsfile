@@ -12,6 +12,7 @@ node {
         echo 'Testing....'
     stage 'deploy'
         echo 'Deploying....'
+        sh 'git branch ugolden -D || true'
         sh 'git checkout upstream/golden'
         sh 'git branch ugolden'
         sh 'git checkout ugolden'
@@ -21,5 +22,4 @@ node {
         sh 'git commit -m "Merging for deployment" || true'
         sh 'git push upstream ugolden:golden'
         sh 'git checkout qa'
-        sh 'git branch ugolden -D'
 }
