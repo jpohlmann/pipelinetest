@@ -1,6 +1,8 @@
 node {
     stage 'build'
         echo 'Building....'
+        sh 'git clone https://github.com/jpohlmann/pipelinetest/ ./'
+        sh 'git remote add upstream https://github.com/jpohlmann/pipelineprod/'
         sh 'git add .'
         sh 'git stash'
         sh 'git checkout qa'
